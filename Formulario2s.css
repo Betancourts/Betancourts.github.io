@@ -1,0 +1,222 @@
+/* Estilos globales */
+html {
+    box-sizing: border-box;
+    font-size: 16px; /* Establece un tamaño base para rem */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-image: url(Videos/yt1z.net-4K-Llamas-y-chispas-en-camara-lenta-Videos-4K-Ultra-HD-_1440p_.gif);
+    background-size: cover; /* Ajusta la imagen de fondo */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Usa min-height para que el body se expanda */
+    margin: 0;
+    padding: 0;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.banner img {
+    max-width: 100%;
+    height: 100%; /* La altura se ajusta automáticamente */
+}
+
+/* Menú */
+.menu {
+    background: linear-gradient(45deg, #333, #666, #333, #999);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    height: 70px; /* La altura se ajusta al contenido */
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0; /* Agrega padding para mejor espaciado */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.menu ul li {
+    margin: 10px 15px; /* Agrega margen vertical */
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px; /* Reduce el padding para pantallas pequeñas */
+    font-size: 1.2rem; /* Usa rem para tamaño de fuente */
+    display: block;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc00;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.menu-item:hover {
+    color: #ffcc00;
+    transform: translateY(-3px);
+}
+
+.menu-item:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+/* Formulario */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.664);
+    padding: 20px; /* Reduce el padding para pantallas pequeñas */
+    border-radius: 45px;
+    box-shadow: 0 0 20px rgb(225, 230, 0);
+    width: 90%; /* Usa porcentaje para el ancho */
+    max-width: 400px; /* Establece un ancho máximo */
+    text-align: center;
+    margin: 20px 0; /* Agrega margen vertical */
+}
+
+.form-container h2 {
+    background-color: transparent;
+    margin-bottom: 20px;
+    font-size: 1.8rem; /* Usa rem para tamaño de fuente */
+    text-align: center;
+}
+
+.form-container label {
+    border: none;
+    background-color: transparent;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container textarea {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px; /* Aumenta el padding para mejor usabilidad */
+    margin-bottom: 15px;
+    border: 1px solid rgb(255, 230, 0);
+    border-radius: 8px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #272727;
+    color: white;
+    text-align: center;
+    padding: 30px 20px; /* Reduce el padding para pantallas pequeñas */
+    width: 100%;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.footer-info h2 {
+    font-size: 1.2rem; /* Usa rem para tamaño de fuente */
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 0.9rem; /* Usa rem para tamaño de fuente */
+}
+
+.footer-contact i {
+    margin-right: 8px;
+    color: #ffcc00;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem; /* Usa rem para tamaño de fuente */
+    color: #888;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+
+}
