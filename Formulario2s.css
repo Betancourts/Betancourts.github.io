@@ -27,6 +27,7 @@ body {
 .banner {
     width: 100%;
     margin-bottom: 0;
+    background-image: url(glow.gif);
     display: flex;
     justify-content: center;
 }
